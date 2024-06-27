@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-import { Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const categorySchema = new Schema(
   {
@@ -8,13 +7,11 @@ const categorySchema = new Schema(
       required: true,
     },
     description: {
-        type: String,
-        required: true,
-    }
+      type: String,
+      required: true,
+    },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
 const categoryModel = mongoose.model('Category', categorySchema);
